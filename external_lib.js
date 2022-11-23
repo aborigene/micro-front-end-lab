@@ -3,9 +3,12 @@ const beaconUrl = 'https://bf31782rqn.bf.dynatrace.com/mbeacon';
 
 const openKit = new OpenKitBuilder(beaconUrl, applicationId).build();
 
+const session = "";
+
 openKit.waitForInit((initializedSuccessfully) => {
     const sessionWithoutArgument = openKit.createSession();
     sessionWithoutArgument.identifyUser('some user'); 
+    session = sessionWithoutArgument;
 });
 
 function sorteio(){
