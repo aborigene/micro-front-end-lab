@@ -5,7 +5,7 @@ const openKit = new OpenKitBuilder(beaconUrl, applicationId).build();
 
 openKit.waitForInit((initializedSuccessfully) => {
     const sessionWithoutArgument = openKit.createSession();
-    session.identifyUser('some user'); 
+    sessionWithoutArgument.identifyUser('some user'); 
 });
 
 function sorteio(){
