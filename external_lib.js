@@ -13,7 +13,7 @@ openKit.waitForInit((initializedSuccessfully) => {
 function sorteio(){
     var w3includehtmlDiv = document.getElementById("w3-include-html");
     w3includehtmlDiv.innerHTML += "Clique abaixo para participar do sorteio.<br>"
-    w3includehtmlDiv.innerHTML += "<input type='button' onClick=sortear();>"
+    w3includehtmlDiv.innerHTML += "<input type='button' value='SORTEAR' onClick=sortear();>"
     w3includehtmlDiv.innerHTML += "<div id='resultado_sorteio'></div>"
 }
 
