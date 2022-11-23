@@ -1,3 +1,13 @@
+const applicationId = '2d92270e-1bd9-4f57-af67-1e6da9870a4d';
+const beaconUrl = 'https://bf31782rqn.bf.dynatrace.com/mbeacon';
+
+const openKit = new OpenKitBuilder(beaconUrl, applicationId, deviceId).build();
+
+openKit.waitForInit((initializedSuccessfully) => {
+    const sessionWithoutArgument = openKit.createSession();
+    session.identifyUser('some user'); 
+});
+
 function sorteio(){
     var w3includehtmlDiv = document.getElementById("w3-include-html");
     w3includehtmlDiv.innerHTML += "Clique abaixo para participar do sorteio.<br>"
