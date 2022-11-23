@@ -84,7 +84,7 @@
                 }
                 };
                 username=document.getElementById("usernameInput").value;
-                xhttp.open('GET', 'http://ec2-3-238-111-111.compute-1.amazonaws.com:8080?name='+username, true);
+                xhttp.open('GET', 'http://ec2-3-238-111-111.compute-1.amazonaws.com:8080/greeting?name='+username, true);
                 xhttp.send();
             }
             else{
@@ -101,7 +101,7 @@
                 }
                 };
                 messageContents=document.getElementById("messageToSend").value;
-                xhttp.open('GET', 'https://b7utbpmou8.execute-api.us-east-1.amazonaws.com/myNodeEcho_Message?name='+messageContents, true);
+                xhttp.open('GET', 'http://ec2-3-238-111-111.compute-1.amazonaws.com:8080/message?name='+messageContents, true);
                 xhttp.send();
             }
             mainDiv.innerHTML = rollingImageContents;
