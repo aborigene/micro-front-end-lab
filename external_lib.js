@@ -3,12 +3,11 @@ const beaconUrl = 'https://bf31782rqn.bf.dynatrace.com/mbeacon';
 
 const openKit = new OpenKitBuilder(beaconUrl, applicationId).build();
 
-const session = "";
+var session = "";
 
 openKit.waitForInit((initializedSuccessfully) => {
-    const sessionWithoutArgument = openKit.createSession();
-    sessionWithoutArgument.identifyUser('some user'); 
-    session = sessionWithoutArgument;
+    session = openKit.createSession();
+    session.identifyUser('some user'); 
 });
 
 function sorteio(){
@@ -66,13 +65,13 @@ function sortear(){
                 .stop(this.status); // stop the tracer
         }
     };
-    const url = 'https://endpoint/sortear'
+    const url = 'http://44.200.68.192:8080/sortear'
     const webRequestTracer = action.traceWebRequest(url);
-    xhttp.setRequestHeader('X-dynaTrace', webRequestTracer.getTag());
-
     webRequestTracer.start();
 
     xhttp.open('GET', url, true);
+    xhttp.setRequestHeader('X-dynaTrace', webRequestTracer.getTag());
+
     xhttp.send();
     resultado_sorteio.innerHTML = rollingImageContents;
 }

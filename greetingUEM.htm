@@ -163,7 +163,7 @@
                 username=document.getElementById("usernameInput").value;
                 var dtUser =  dtrum.identifyUser(username);
                 dtrum.addEnterActionListener(addDynatraceActionPropertyString);
-                xhttp.open('GET', 'https://n75yv8xyi2.execute-api.us-east-1.amazonaws.com/default/myNodeEcho?name='+username, true);
+                xhttp.open('GET', 'http://ec2-3-238-111-111.compute-1.amazonaws.com:8080?name='+username, true);
                 xhttp.send();
             }
             
