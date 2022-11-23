@@ -1,7 +1,7 @@
 const applicationId = '2d92270e-1bd9-4f57-af67-1e6da9870a4d';
 const beaconUrl = 'https://bf31782rqn.bf.dynatrace.com/mbeacon';
 
-const openKit = new OpenKitBuilder(beaconUrl, applicationId, deviceId).build();
+const openKit = new OpenKitBuilder(beaconUrl, applicationId).build();
 
 openKit.waitForInit((initializedSuccessfully) => {
     const sessionWithoutArgument = openKit.createSession();
